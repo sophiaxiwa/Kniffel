@@ -375,9 +375,8 @@ def option_geklickt(name):
 
     elif buttonname == "3er Pasch":
         x=0
-        for zahl, count in counter.items():
-            if count == 3:
-                x = zahl * 3
+        for i in wuerfel_zahlen:
+            x = x + i
         spielblockspieler["3er Pasch"] = x
         punkte = punkte + x
         listboxspieler.delete(7)
@@ -385,9 +384,8 @@ def option_geklickt(name):
     
     elif buttonname == "4er Pasch":
         x=0
-        for zahl, count in counter.items():
-            if count == 4:
-                x = zahl * 4
+        for i in wuerfel_zahlen:
+            x = x + i
         spielblockspieler["4er Pasch"] = x
         punkte = punkte + x
         listboxspieler.delete(8)
@@ -874,7 +872,7 @@ def botzug():
 
     elif eintragen == "5":
         x = 0
-        for i in botwuerfel:
+        for i in botwuerfel:   
             if i == 5:
                 x=x+5
         spielblockbot["5"]=x
@@ -894,9 +892,8 @@ def botzug():
 
     elif eintragen == "3er Pasch":
         x=0
-        for zahl, count in counter.items():
-            if count == 3:
-                x = zahl * 3
+        for i in botwuerfel:
+            x = x + i
         spielblockbot["3er Pasch"] = x
         botpunkte = botpunkte + x
         listboxbot.delete(7)
@@ -905,9 +902,8 @@ def botzug():
     
     elif eintragen == "4er Pasch":
         x=0
-        for zahl, count in counter.items():
-            if count == 4:
-                x = zahl * 4
+        for i in botwuerfel:
+            x = x + i
         spielblockbot["4er Pasch"] = x
         botpunkte = botpunkte + x
         listboxbot.delete(8)
@@ -1247,5 +1243,4 @@ kniffelroot.mainloop()
   
   
    
-
 
